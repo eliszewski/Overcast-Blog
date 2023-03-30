@@ -1,0 +1,19 @@
+export enum Theme {
+  MUSICOFTHEDAY = 'MUSICOFTHEDAY',
+
+  ANIMAL = 'ANIMAL',
+
+  RANDOM = 'RANDOM',
+
+  MEME = 'MEME',
+
+  NATURE = 'NATURE',
+
+  HOMEDECOR = 'HOMEDECOR',
+
+  INTEREST = 'INTEREST',
+
+  IRL = 'IRL',
+
+  MOVIETVCELEB = 'MOVIETVCELEB',
+}

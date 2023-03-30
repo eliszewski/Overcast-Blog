@@ -1,0 +1,40 @@
+{
+  "applications": ["overcastBlog"],
+  "changelogDate": "20230330164646",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "rating",
+  "fields": [
+    {
+      "fieldName": "stars",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required", "min", "max"],
+      "fieldValidateRulesMax": "5",
+      "fieldValidateRulesMin": "1"
+    },
+    {
+      "fieldName": "date",
+      "fieldType": "Instant"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Rating",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "login",
+      "otherEntityName": "user",
+      "relationshipName": "user",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "link",
+      "otherEntityRelationshipName": "rating",
+      "relationshipName": "link",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

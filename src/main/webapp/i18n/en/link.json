@@ -1,0 +1,27 @@
+{
+  "overcastBlogApp": {
+    "link": {
+      "home": {
+        "title": "Links",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Link",
+        "createOrEditLabel": "Create or edit a Link",
+        "notFound": "No Links found"
+      },
+      "created": "A new Link is created with identifier {{ param }}",
+      "updated": "A Link is updated with identifier {{ param }}",
+      "deleted": "A Link is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Link {{ id }}?"
+      },
+      "detail": {
+        "title": "Link"
+      },
+      "id": "ID",
+      "url": "Url",
+      "linkTheme": "Link Theme",
+      "post": "Post",
+      "rating": "Rating"
+    }
+  }
+}

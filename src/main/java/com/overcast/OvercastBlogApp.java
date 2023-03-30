@@ -32,7 +32,7 @@ public class OvercastBlogApp {
     }
 
     /**
-     * Initializes OvercastBlog.
+     * Initializes overcastBlog.
      * <p>
      * Spring profiles can be configured with a program argument --spring.profiles.active=your-active-profile
      * <p>

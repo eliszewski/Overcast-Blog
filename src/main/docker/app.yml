@@ -17,7 +17,7 @@ services:
   overcastblog-mysql:
     image: mysql:8.0.30
     # volumes:
-    #   - ~/volumes/jhipster/OvercastBlog/mysql/:/var/lib/mysql/
+    #   - ~/volumes/jhipster/overcastBlog/mysql/:/var/lib/mysql/
     volumes:
       - ./config/mysql:/etc/mysql/conf.d
     environment:

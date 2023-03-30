@@ -48,6 +48,15 @@ public class CacheConfiguration {
             createCache(cm, com.overcast.domain.User.class.getName());
             createCache(cm, com.overcast.domain.Authority.class.getName());
             createCache(cm, com.overcast.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.overcast.domain.Post.class.getName());
+            createCache(cm, com.overcast.domain.Post.class.getName() + ".links");
+            createCache(cm, com.overcast.domain.Post.class.getName() + ".linkThemes");
+            createCache(cm, com.overcast.domain.Blog.class.getName());
+            createCache(cm, com.overcast.domain.Blog.class.getName() + ".posts");
+            createCache(cm, com.overcast.domain.Link.class.getName());
+            createCache(cm, com.overcast.domain.Link.class.getName() + ".ratings");
+            createCache(cm, com.overcast.domain.LinkTheme.class.getName());
+            createCache(cm, com.overcast.domain.Rating.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

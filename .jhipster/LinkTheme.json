@@ -1,0 +1,50 @@
+{
+  "applications": ["overcastBlog"],
+  "changelogDate": "20230330164645",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "link_theme",
+  "fields": [
+    {
+      "fieldName": "isCustom",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "customName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "presetTheme",
+      "fieldType": "Theme",
+      "fieldValues": "MUSICOFTHEDAY,ANIMAL,RANDOM,MEME,NATURE,HOMEDECOR,INTEREST,IRL,MOVIETVCELEB"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "LinkTheme",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "post",
+      "otherEntityRelationshipName": "linkTheme",
+      "relationshipName": "post",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityField": "login",
+      "otherEntityName": "user",
+      "relationshipName": "user",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "link",
+      "otherEntityRelationshipName": "linkTheme",
+      "ownerSide": false,
+      "relationshipName": "link",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

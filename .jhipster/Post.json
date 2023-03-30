@@ -1,0 +1,49 @@
+{
+  "applications": ["overcastBlog"],
+  "changelogDate": "20230330164642",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "post",
+  "fields": [
+    {
+      "fieldName": "header",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "content",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "text"
+    },
+    {
+      "fieldName": "date",
+      "fieldType": "ZonedDateTime",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Post",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "link",
+      "otherEntityRelationshipName": "post",
+      "relationshipName": "link",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "blog",
+      "otherEntityRelationshipName": "post",
+      "relationshipName": "blog",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "linkTheme",
+      "otherEntityRelationshipName": "post",
+      "relationshipName": "linkTheme",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

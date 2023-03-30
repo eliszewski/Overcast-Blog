@@ -1,0 +1,80 @@
+
+application {
+  config {
+    baseName overcastBlog,
+    applicationType monolith,
+    packageName com.overcast,
+    authenticationType jwt,
+    prodDatabaseType mysql,
+    clientFramework react
+  }
+  entities *
+}
+
+entity Post {
+header String
+content TextBlob 
+date ZonedDateTime required
+}
+
+entity Blog {
+  name String
+  title String required,
+  description String,
+  createdBy String,
+  createdDate Instant,
+  aboutMe TextBlob
+  spotifyProfileLink String
+}
+entity Link{
+	url String required
+}
+
+enum Theme{
+MUSICOFTHEDAY,
+ANIMAL,
+RANDOM,
+MEME,
+NATURE,
+HOMEDECOR,
+INTEREST,
+IRL,
+MOVIETVCELEB
+}
+
+entity LinkTheme{
+	isCustom Boolean required
+	customName String
+    presetTheme Theme
+}
+
+entity Rating{
+stars Integer required min(1) max(5)
+date Instant 
+}
+
+relationship OneToMany {
+  Post to Link
+}
+
+relationship ManyToOne {
+Post to Blog 
+LinkTheme to Post
+Rating{user(login)} to User
+Rating to Link
+LinkTheme{user(login)} to User
+}
+
+relationship OneToOne {
+Blog{user(login)} to User
+Link to LinkTheme
+}
+
+dto * with mapstruct
+service * with serviceClass
+
+
+
+
+
+    

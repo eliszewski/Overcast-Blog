@@ -2,7 +2,7 @@
   "name": "overcast-blog",
   "version": "0.0.1-SNAPSHOT",
   "private": true,
-  "description": "Description for OvercastBlog",
+  "description": "Description for overcastBlog",
   "license": "UNLICENSED",
   "scripts": {
     "app:start": "./mvnw",
@@ -68,7 +68,7 @@
     "webpack-dev-server": "webpack serve"
   },
   "config": {
-    "backend_port": 8080,
+    "backend_port": "8080",
     "default_environment": "prod",
     "packaging": "jar"
   },

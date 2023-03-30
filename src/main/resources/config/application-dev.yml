@@ -33,7 +33,7 @@ spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
     url: jdbc:h2:file:./target/h2db/db/overcastblog;DB_CLOSE_DELAY=-1;MODE=LEGACY
-    username: OvercastBlog
+    username: overcastBlog
     password:
     hikari:
       poolName: Hikari

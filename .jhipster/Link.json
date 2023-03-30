@@ -1,0 +1,41 @@
+{
+  "applications": ["overcastBlog"],
+  "changelogDate": "20230330164644",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "link",
+  "fields": [
+    {
+      "fieldName": "url",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Link",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "linkTheme",
+      "otherEntityRelationshipName": "link",
+      "ownerSide": true,
+      "relationshipName": "linkTheme",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "post",
+      "otherEntityRelationshipName": "link",
+      "relationshipName": "post",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "rating",
+      "otherEntityRelationshipName": "link",
+      "relationshipName": "rating",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}
